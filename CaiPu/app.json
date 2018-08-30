@@ -1,0 +1,17 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/menuDetail/menuDetail"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ff5722",
+        "navigationBarTitleText": "炒个菜",
+        "navigationBarTextStyle": "white",
+        "backgroundColor": "white"
+    },
+    "networkTimeout": {
+        "request": 10000,
+        "downloadFile": 10000
+    }
+}

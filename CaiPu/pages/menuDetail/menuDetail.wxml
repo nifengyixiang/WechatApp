@@ -1,0 +1,25 @@
+<!--pages/menuDetail/menuDetail.wxml-->
+<view class='container'>
+    <scroll-view class='main-scroll' scroll-y='true'>
+        <image class='main-img' src='{{img}}' wx:if="{{img!=''}}"></image>
+        <view class='text-menu' wx:if="{{sumary!=''}}">
+            介绍
+        </view>
+        <view class='text-content'>
+            {{sumary}}
+        </view>
+        <view class='text-menu' wx:if="{{ingredients.length>0}}">
+            原材料
+        </view>
+        <view class='text-content' wx:for='{{ingredients}}'>
+            {{item}}
+        </view>
+        <view class='text-menu' wx:if="{{methods.length>0}}">
+            步骤
+        </view>
+        <view class='text-content' wx:for='{{methods}}'>
+            {{item.step}}
+        </view>
+        <view class='bottom-height'></view>
+    </scroll-view>
+</view>

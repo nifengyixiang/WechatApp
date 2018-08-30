@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+    <scroll-view scroll-x="true" class="tab-h" style='width:{{tabWidth}}px' scroll-left="{{scrollLeft}}">
+        <view style='height:100%;max-width:{{tabWidth}}px'>
+            <view wx:for='{{childCategorys}}' id='{{index}}' class="tab-item ellipsis {{currentTab==index?'active':''}}" bindtap="swichNav">{{item.categoryInfo.name}}
+            </view>
+        </view>
+    </scroll-view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{contentHeight}}px">
+        <swiper-item class="tab-content" wx:for="{{childCategorys}}">
+            <scroll-view scroll-y='true' class="scoll-list" style="height:{{contentHeight}}px" bindscrolltolower="lower">
+                <view class='list-content'>
+                    <view bindtap='itemClick' class='menu-item' wx:for="{{menuList}}" id='{{index}}' wx:if='{{item.thumbnail!=null}}' style='background-image: url({{item.thumbnail}})'>
+                        <view class='item-name ellipsis'>
+                            {{item.name}}
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+    <view class='switch-category' bindtap='switchCategory'>
+        <image src='{{bottomArrow}}'></image>
+    </view>
+</view>

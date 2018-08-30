@@ -1,0 +1,87 @@
+/**app.wxss**/
+
+.container {
+    height: 100%;
+    width: 750rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 34rpx;
+    font-family: '微软雅黑';
+}
+
+/*隐藏滚动条  */
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+/*自定义toast样式  */
+
+.my-toast {
+    min-width: 240rpx;
+    max-width: 650rpx;
+    padding: 0 15rpx;
+    height: 96rpx;
+    line-height: 96rpx;
+    display: flex;
+    flex-direction: row;
+    border-radius: 46rpx;
+    background-color: #000;
+    color: #fff;
+    font-size: 36rpx;
+    text-align: center;
+    position: absolute;
+    bottom: 133rpx;
+    z-index: 100;
+    opacity: 0.8;
+}
+
+.my-toast image {
+    margin: 24rpx 10rpx 0 15rpx;
+    width: 46rpx;
+    height: 46rpx;
+}
+
+/*空白页样式  */
+
+.nothing {
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    text-align: center;
+    color: #fc0;
+    font-size: 32rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.nothing image {
+    margin: 300rpx auto 30rpx;
+    width: 380rpx;
+    height: 300rpx;
+}
+
+/*超出一行省略  */
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*多行省略  */
+
+.lines-ellipsis {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
